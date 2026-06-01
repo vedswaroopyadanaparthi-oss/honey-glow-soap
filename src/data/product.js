@@ -4,162 +4,78 @@ export const brand = {
   displayPhone: "314-791-9590",
   logo: "/honey-glow-logo.png",
   tagline: "Handmade floral soaps with a soft honey glow.",
-};
-
-export const product = {
-  name: "Peppermint Rose Bloom Bar",
-  price: "$11.99",
-  shipping: "Free shipping",
-  scent: "Peppermint",
-  heroSubtitle:
-    "A handcrafted rose-shaped soap with aloe vera, honey, vitamin E, and a refreshing peppermint scent.",
-  description:
-    "Peppermint Rose Bloom Bar is a handcrafted rose-shaped soap made with aloe vera, honey, and vitamin E. Finished with soft pink rose details, green leaf accents, and a refreshing peppermint scent, it brings a clean, gift-ready look to any sink, shelf, or self-care routine.",
-  details: [
-    "Aloe vera",
-    "Honey",
-    "Vitamin E",
-    "Peppermint scent",
-    "Handmade",
-    "Rose-shaped",
-    "Gift-ready",
-    "Free shipping",
-  ],
-  images: {
-    hero: "/soap-frames/frame-05.webp",
-    angle: "/soap-frames/frame-03.webp",
-    final: "/soap-frames/frame-06.webp",
-    petal: "/details/detail-petal.webp",
-    gloss: "/details/detail-gloss.webp",
-    leaf: "/details/detail-leaf.webp",
-  },
+  announcement: "FREE SHIPPING ON ALL CURRENT ORDERS",
 };
 
 export const orderHref = `sms:${brand.phone}`;
 export const callHref = `tel:${brand.phone}`;
 
 export const navLinks = [
-  { label: "Reveal", href: "#reveal" },
-  { label: "Product", href: "#product" },
-  { label: "Ingredients", href: "#ingredients" },
-  { label: "Process", href: "#process" },
-  { label: "Order", href: "#order" },
+  { label: "Home", href: "#home" },
+  { label: "Shop", href: "#shop" },
+  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
 ];
 
-export const introAssets = [brand.logo, product.images.hero];
-
-export const scrollScenes = [
+export const products = [
   {
-    title: "Rose-shaped by design.",
-    eyebrow: "The Bloom",
-    text: "Soft pink rose details and green leaf accents give the bar its signature floral look.",
-    image: product.images.hero,
-    accent: "rose",
+    name: "Peppermint Rose Bloom Bar",
+    price: "$11.99",
+    available: true,
+    shipping: "Free shipping",
+    image: "/soap-frames/frame-05.webp",
+    cardImage: "/soap-frames/frame-03.webp",
+    detailImage: "/soap-frames/frame-06.webp",
+    scent: "Peppermint scent",
+    shortLabel: "Peppermint scent | Rose-shaped soap",
+    description:
+      "Peppermint Rose Bloom Bar is a handcrafted rose-shaped soap made with aloe vera, honey, and vitamin E. Finished with soft pink rose details, green leaf accents, and a refreshing peppermint scent, it brings a clean, gift-ready look to any sink, shelf, or self-care routine.",
+    tags: [
+      "Aloe vera",
+      "Honey",
+      "Vitamin E",
+      "Peppermint scent",
+      "Handmade",
+      "Rose-shaped",
+      "Gift-ready",
+    ],
+    detailImages: [
+      { label: "Petal detail", src: "/details/detail-petal.webp" },
+      { label: "Glossy finish", src: "/details/detail-gloss.webp" },
+      { label: "Leaf accent", src: "/details/detail-leaf.webp" },
+    ],
   },
   {
-    title: "Made with aloe vera.",
-    eyebrow: "Aloe Vera",
-    text: "Part of the bar's carefully selected handcrafted blend.",
-    image: product.images.gloss,
-    accent: "sage",
+    name: "Honey Oat Glow Bar",
+    available: false,
+    status: "Coming Soon",
+    shortLabel: "Warm honey oat soap",
   },
   {
-    title: "Finished with a honey glow.",
-    eyebrow: "Honey",
-    text: "Honey brings a warm golden identity to the bar's formula and brand story.",
-    image: product.images.final,
-    accent: "honey",
+    name: "Lavender Cloud Bar",
+    available: false,
+    status: "Coming Soon",
+    shortLabel: "Soft lavender soap",
   },
   {
-    title: "Blended with vitamin E.",
-    eyebrow: "Vitamin E",
-    text: "Vitamin E is included as part of the bar's thoughtful ingredient blend.",
-    image: product.images.petal,
-    accent: "pearl",
-  },
-  {
-    title: "Refreshingly peppermint.",
-    eyebrow: "Peppermint Scent",
-    text: "A cool peppermint scent gives the bar a fresh, clean character.",
-    image: product.images.leaf,
-    accent: "mint",
-  },
-  {
-    title: "Gift-ready from first look.",
-    eyebrow: "Gift Ready",
-    text: "Designed to look beautiful on a sink, shelf, or self-care display.",
-    image: product.images.angle,
-    accent: "blush",
-  },
-];
-
-export const storyPreloadAssets = [...new Set(scrollScenes.map((scene) => scene.image))];
-
-export const ingredients = [
-  {
-    name: "Aloe Vera",
-    description: "Included as part of the bar's carefully selected handcrafted blend.",
-    accent: "sage",
-  },
-  {
-    name: "Honey",
-    description: "Adds a warm golden identity to the product's story and formula.",
-    accent: "honey",
-  },
-  {
-    name: "Vitamin E",
-    description: "Part of the thoughtful ingredient blend behind the bar.",
-    accent: "pearl",
-  },
-  {
-    name: "Peppermint Scent",
-    description: "A refreshing scent profile with a cool, clean character.",
-    accent: "mint",
+    name: "Citrus Bloom Bar",
+    available: false,
+    status: "Coming Soon",
+    shortLabel: "Bright citrus soap",
   },
 ];
 
-export const processSteps = [
-  {
-    title: "Melt",
-    text: "The soap base is melted until smooth.",
-  },
-  {
-    title: "Blend",
-    text: "Aloe vera, honey, vitamin E, color, and peppermint scent are added.",
-  },
-  {
-    title: "Pour",
-    text: "The blend is poured into a rose mold to form the floral shape.",
-  },
-  {
-    title: "Detail",
-    text: "Soft pink tones and green leaf accents define the bloom.",
-  },
-  {
-    title: "Finish",
-    text: "Each bar is prepared with a clean, gift-ready presentation.",
-  },
-];
+export const featuredProduct = products.find((product) => product.available);
 
-export const detailImages = [
-  {
-    title: "Petal Spiral",
-    image: product.images.petal,
-    className: "detail-panel-large",
-  },
-  {
-    title: "Glossy Finish",
-    image: product.images.gloss,
-    className: "",
-  },
-  {
-    title: "Leaf Accent",
-    image: product.images.leaf,
-    className: "",
-  },
-  {
-    title: "Rose Shape",
-    image: product.images.angle,
-    className: "detail-panel-wide",
-  },
-];
+export const hero = {
+  headline: "Handmade Soaps with a Soft Honey Glow",
+  subtitle:
+    "Small-batch soaps designed with clean scents, soft colors, and gift-ready details.",
+  image: featuredProduct.image,
+};
+
+export const aboutCopy =
+  "Honey Glow Soap is a small handmade soap brand focused on creating clean, gift-ready bars with soft colors, refreshing scents, and polished handmade details. The shop is starting with Peppermint Rose Bloom Bar, with more soaps planned for the future.";
+
+export const safetyNote =
+  "For external use only. Avoid contact with eyes. Discontinue use if irritation occurs.";

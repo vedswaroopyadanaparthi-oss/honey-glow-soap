@@ -1,18 +1,16 @@
-import { useState } from "react";
+import { Menu, Search, ShoppingBag, User, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, MessageCircle, X } from "lucide-react";
-import MagneticButton from "./MagneticButton.jsx";
-import { brand, navLinks, orderHref } from "../data/product.js";
+import { useState } from "react";
+import { brand, navLinks } from "../data/product.js";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-
   const close = () => setOpen(false);
 
   return (
     <header className="site-header">
-      <nav aria-label="Main navigation" className="nav-shell">
-        <a className="brand-link" href="#top" onClick={close}>
+      <nav className="nav-shell" aria-label="Main navigation">
+        <a className="brand-link" href="#home" onClick={close}>
           <img alt={`${brand.name} logo`} decoding="async" src={brand.logo} />
           <span>{brand.name}</span>
         </a>
@@ -25,16 +23,10 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="nav-actions">
-          <MagneticButton
-            ariaLabel={`Text ${brand.displayPhone} to order`}
-            className="button-primary button-small"
-            href={orderHref}
-          >
-            <MessageCircle size={17} />
-            Text to Order
-          </MagneticButton>
-
+        <div className="nav-icons" aria-label="Decorative shop icons">
+          <Search aria-hidden="true" size={20} />
+          <User aria-hidden="true" size={20} />
+          <ShoppingBag aria-hidden="true" size={20} />
           <button
             aria-expanded={open}
             aria-label="Toggle navigation menu"
@@ -54,16 +46,13 @@ export default function Navbar() {
             className="mobile-menu"
             exit={{ opacity: 0, y: -8 }}
             initial={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.22 }}
+            transition={{ duration: 0.2 }}
           >
             {navLinks.map((link) => (
               <a href={link.href} key={link.href} onClick={close}>
                 {link.label}
               </a>
             ))}
-            <a href={orderHref} onClick={close}>
-              Text to Order
-            </a>
           </motion.div>
         )}
       </AnimatePresence>

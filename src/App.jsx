@@ -1,30 +1,23 @@
-import DetailGallery from "./components/DetailGallery.jsx";
+import About from "./components/About.jsx";
+import AnnouncementBar from "./components/AnnouncementBar.jsx";
+import ContactOrder from "./components/ContactOrder.jsx";
 import Footer from "./components/Footer.jsx";
 import Hero from "./components/Hero.jsx";
-import Ingredients from "./components/Ingredients.jsx";
-import IntroLoader from "./components/IntroLoader.jsx";
 import Navbar from "./components/Navbar.jsx";
-import OrderCTA from "./components/OrderCTA.jsx";
-import Process from "./components/Process.jsx";
-import ProductSpotlight from "./components/ProductSpotlight.jsx";
-import ScrollStory from "./components/ScrollStory.jsx";
-import useLenis from "./hooks/useLenis.js";
+import ProductDetail from "./components/ProductDetail.jsx";
+import ShopGrid from "./components/ShopGrid.jsx";
 
 export default function App() {
-  useLenis();
-
   return (
     <>
-      <IntroLoader />
+      <AnnouncementBar />
       <Navbar />
       <main>
         <Hero />
-        <ScrollStory />
-        <ProductSpotlight />
-        <Ingredients />
-        <Process />
-        <DetailGallery />
-        <OrderCTA />
+        <ShopGrid />
+        <ProductDetail />
+        <About />
+        <ContactOrder />
       </main>
       <Footer />
     </>
